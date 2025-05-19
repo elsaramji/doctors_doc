@@ -1,0 +1,21 @@
+flutter_native_splash:
+  color: "#ffffff"
+  background_image: "assets/images/Splash Screen.png"
+
+  android_12:
+    image: assets/images/Splash Screenandroid12.png
+
+    # Splash screen background color.
+    color: "#ffffff"
+    # App icon background color.
+    #icon_background_color: "#ffffff"
+
+    # The branding property allows you to specify an image used as branding in the splash screen.
+    #branding: assets/dart.png
+    # The image_dark, color_dark, icon_background_color_dark, and branding_dark set values that
+    # apply when the device is in dark mode. If they are not specified, the app will use the
+    # parameters from above.  If there is no parameter above, the app will use the light mode values.
+    #image_dark: assets/android12splash-invert.png
+    #color_dark: "#042a49"
+    #icon_background_color_dark: "#eeeeee"
+
