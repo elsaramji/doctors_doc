@@ -1,24 +1,25 @@
 import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/config/themes/colors.dart';
-import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
-import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_devider.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_form.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_functions.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_go_signup.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_header.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_social_buttons.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_terms.dart';
+import 'package:doctors_doc/shared/presentation/widgets/custom_primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginView extends StatefulWidget {
+class LoginView extends StatelessWidget {
   static String route = ConstantRouts.login;
   LoginView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
-}
-
-class _LoginViewState extends State<LoginView> {
-  bool isObscure = true;
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundwhite,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 24.w),
@@ -27,74 +28,24 @@ class _LoginViewState extends State<LoginView> {
               context.verticalSpace(50),
               LoginTextHeader(),
               context.verticalSpace(36),
-              CustomFormFeild(
-                textInputAction: TextInputAction.done,
-                textInputType: TextInputType.emailAddress,
-                validator: (value) {
-                  return null;
-                },
-                hintText: "Email",
-                obscureText: false,
-              ),
+              LoginForm(),
               context.verticalSpace(16),
-              CustomFormFeild(
-                textInputAction: TextInputAction.done,
-                textInputType: TextInputType.visiblePassword,
-                validator: (value) {
-                  return null;
-                },
-                hintText: "Password",
-                obscureText: isObscure,
-                suffixIcon: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.w),
-                  child: GestureDetector(
-                    onTap: () {
-                      isObscure = !isObscure;
-                      setState(() {});
-                    },
-                    child: Icon(
-                      size: 24,
-                      isObscure
-                          ? Icons.visibility_off_outlined
-                          : Icons.visibility_outlined,
-                      color: AppColors.text100,
-                    ),
-                  ),
-                ),
-              ),
+              LoginFuctions(),
+              context.verticalSpace(32),
+              PrimaryButton(onPressed: () {}, text: 'Login'),
+              context.verticalSpace(46),
+              LoginDivider(),
+              context.verticalSpace(32),
+              LoginSocialButtons(),
+
+              context.verticalSpace(32),
+              // terms and conditions text
+              TermsandConditions(),
+              context.verticalSpace(24),
+              GoSignUp(),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class LoginTextHeader extends StatelessWidget {
-  const LoginTextHeader({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 6.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Welcome Back",
-            style: AppTextStyles.interBold24.copyWith(
-              color: AppColors.primary100,
-            ),
-          ),
-          Text(
-            "We're excited to have you back, can't wait to see what you've been up to since you last \nlogged in.",
-            style: AppTextStyles.interRegular14.copyWith(
-              color: AppColors.textbody,
-              letterSpacing: 0.2,
-              height: 1.8,
-            ),
-          ),
-        ],
       ),
     );
   }
