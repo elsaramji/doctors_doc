@@ -4,6 +4,9 @@ import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// LoginForm widget is a stateful widget that contains two text fields for email and password.
+/// It also includes a visibility toggle for the password field.
+/// /// The widget uses a custom form field widget for input fields and handles the visibility of the password field.
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
 

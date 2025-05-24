@@ -1,8 +1,12 @@
-
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:flutter/material.dart';
 
+/// A widget that provides login functionalities such as "Remember me" checkbox
+/// and "Forgot Password?" link.
+/// /// This widget is stateful to manage the state of the "Remember me" checkbox.
+/// /// It allows users to choose whether they want the app to remember their login
+/// credentials and provides a link for password recovery.
 class LoginFuctions extends StatefulWidget {
   const LoginFuctions({super.key});
 
