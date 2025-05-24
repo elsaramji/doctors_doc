@@ -4,6 +4,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// A widget that displays terms and conditions text with clickable links for "Terms & Conditions" and "Privacy Policy".
+/// This widget is used in the login view to inform users about the terms they agree to by signing in.
+/// /// The text is styled with a specific font style and color, and the links are interactive, allowing users to tap on them.
 class TermsandConditions extends StatelessWidget {
   const TermsandConditions({super.key});
 
