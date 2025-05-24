@@ -18,30 +18,55 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // This is the main login view that contains all the widgets related to the login process.
+    // It includes the header, login form, functions, primary button, social buttons, terms and conditions, and go to sign up.
+    // The layout is responsive and uses ScreenUtil for dimensions.
     return Scaffold(
+      // Set the background color of the login view
       backgroundColor: AppColors.backgroundwhite,
+      // Use SafeArea to avoid system UI overlaps
       body: SafeArea(
+        // Use a Container to provide padding and margin
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 24.w),
+          // Set the padding for the container
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          // Column to arrange the widgets vertically
           child: Column(
             children: [
+              // Vertical space at the top
               context.verticalSpace(50),
+              // Login header widget
               LoginTextHeader(),
+              // Vertical space after the header
               context.verticalSpace(36),
+              // Login form widget
               LoginForm(),
+              // Vertical space after the form
               context.verticalSpace(16),
+              // Login functions widget (e.g., forgot password, remember me)
               LoginFuctions(),
+              // Vertical space after the functions
               context.verticalSpace(32),
+              // Primary button for login
+              // This button will trigger the login action
               PrimaryButton(onPressed: () {}, text: 'Login'),
+              // Vertical space after the primary button
               context.verticalSpace(46),
+              // Divider for social login options
               LoginDivider(),
+              // Vertical space after the divider
               context.verticalSpace(32),
+              // Social buttons for login (e.g., Google, Facebook)
               LoginSocialButtons(),
-
+              // Vertical space after the social buttons
               context.verticalSpace(32),
+
               // terms and conditions text
               TermsandConditions(),
+              // Vertical space after the terms and conditions
               context.verticalSpace(24),
+              // Go to sign up widget
+              // This widget will navigate the user to the sign-up page
               GoSignUp(),
             ],
           ),

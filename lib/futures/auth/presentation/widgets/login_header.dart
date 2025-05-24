@@ -3,6 +3,10 @@ import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+/// A widget that displays a header for the login screen.
+/// It includes a welcome message and a brief description.
+/// /// This widget is typically used at the top of the login screen to greet users
+/// and provide context about the login process.
 class LoginTextHeader extends StatelessWidget {
   const LoginTextHeader({super.key});
 
