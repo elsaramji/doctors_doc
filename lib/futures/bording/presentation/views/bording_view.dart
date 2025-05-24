@@ -2,10 +2,11 @@ import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
 import 'package:doctors_doc/futures/bording/presentation/functions/button_fun.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/body.dart';
-import 'package:doctors_doc/futures/bording/presentation/widgets/button.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/descreption.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/header.dart';
+import 'package:doctors_doc/shared/presentation/widgets/custom_primary_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BordingView extends StatelessWidget {
   static String route = ConstantRouts.onbording;
@@ -29,10 +30,14 @@ class BordingView extends StatelessWidget {
             OnBordingDescription(),
             // OnBordingButton
             context.verticalSpace(32),
-            OnBordingButton(
-              onPressed: () {
-                getsarted(context);
-              },
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32.w),
+              child: PrimaryButton(
+                onPressed: () {
+                  getsarted(context);
+                },
+                text: 'Get Started',
+              ),
             ),
           ],
         ),
