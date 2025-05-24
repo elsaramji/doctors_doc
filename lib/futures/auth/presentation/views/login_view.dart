@@ -70,7 +70,6 @@ class _LoginViewState extends State<LoginView> {
   }
 }
 
-
 class LoginTextHeader extends StatelessWidget {
   const LoginTextHeader({super.key});
 
