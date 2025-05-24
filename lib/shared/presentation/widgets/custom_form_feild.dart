@@ -40,6 +40,8 @@ class CustomFormFeild extends StatelessWidget {
         decorationThickness: 0,
       ),
       decoration: InputDecoration(
+        filled: true,
+        fillColor: AppColors.secondaryform,
         isDense: true,
         hintText: hintText,
         suffixIcon: suffixIcon,
