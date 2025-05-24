@@ -1,5 +1,6 @@
 import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
+import 'package:doctors_doc/futures/bording/presentation/functions/button_fun.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/body.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/button.dart';
 import 'package:doctors_doc/futures/bording/presentation/widgets/descreption.dart';
@@ -28,7 +29,11 @@ class BordingView extends StatelessWidget {
             OnBordingDescription(),
             // OnBordingButton
             context.verticalSpace(32),
-            OnBordingButton(),
+            OnBordingButton(
+              onPressed: () {
+                getsarted(context);
+              },
+            ),
           ],
         ),
       ),

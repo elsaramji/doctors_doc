@@ -236,6 +236,14 @@ class AppTextStyles {
     letterSpacing: 0,
   );
 
+  static TextStyle interMedium14 = TextStyle(
+    fontSize: 14.sp,
+    decoration: TextDecoration.none,
+    fontFamily: 'Inter-Medium',
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0,
+  );
   static TextStyle interRegular16 = TextStyle(
     fontSize: 16.sp,
     decoration: TextDecoration.none,
@@ -263,4 +271,3 @@ class AppTextStyles {
     letterSpacing: 0,
   );
 }
-
