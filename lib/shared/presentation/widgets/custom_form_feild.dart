@@ -11,6 +11,7 @@ class CustomFormFeild extends StatelessWidget {
   final String hintText;
   final bool obscureText;
   final Widget? suffixIcon;
+  final Widget? prefix;
 
   const CustomFormFeild({
     super.key,
@@ -21,6 +22,7 @@ class CustomFormFeild extends StatelessWidget {
     required this.hintText,
     required this.obscureText,
     this.suffixIcon,
+    this.prefix,
   });
 
   @override
@@ -40,6 +42,7 @@ class CustomFormFeild extends StatelessWidget {
         decorationThickness: 0,
       ),
       decoration: InputDecoration(
+        prefixIcon: prefix,
         filled: true,
         fillColor: AppColors.secondaryform,
         isDense: true,
