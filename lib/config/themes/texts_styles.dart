@@ -1,273 +1,64 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
-  static TextStyle interBold48 = TextStyle(
-    fontSize: 48.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
+  static TextStyle interBold12() =>
+      GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold14() =>
+      GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold16() =>
+      GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold18() =>
+      GoogleFonts.inter(fontSize: 18.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold20() =>
+      GoogleFonts.inter(fontSize: 20.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold24() =>
+      GoogleFonts.inter(fontSize: 24.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold30() =>
+      GoogleFonts.inter(fontSize: 30.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold32() =>
+      GoogleFonts.inter(fontSize: 32.sp, fontWeight: FontWeight.w700);
+  static TextStyle interBold36() =>
+      GoogleFonts.inter(fontSize: 36.sp, fontWeight: FontWeight.w700);
+  static TextStyle interSemiBold11() =>
+      GoogleFonts.inter(fontSize: 11.sp, fontWeight: FontWeight.w600);
+  static TextStyle interSemiBold12() =>
+      GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w600);
+  static TextStyle interSemiBold14() =>
+      GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w600);
+  static TextStyle interSemiBold16() =>
+      GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w600);
+  static TextStyle interSemiBold18() =>
+      GoogleFonts.inter(fontSize: 18.sp, fontWeight: FontWeight.w600);
+  static TextStyle interSemiBold20() =>
+      GoogleFonts.inter(fontSize: 20.sp, fontWeight: FontWeight.w600);
+  static TextStyle interMedium12() =>
+      GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w500);
+  static TextStyle interMedium14() =>
+      GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w500);
+  static TextStyle interMedium16() =>
+      GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500);
+  static TextStyle interMedium18() =>
+      GoogleFonts.inter(fontSize: 18.sp, fontWeight: FontWeight.w500);
+  static TextStyle interMedium20() =>
+      GoogleFonts.inter(fontSize: 20.sp, fontWeight: FontWeight.w500);
+  static TextStyle interRegular10() =>
+      GoogleFonts.inter(fontSize: 10.sp, fontWeight: FontWeight.w400);
+  static TextStyle interRegular11() =>
+      GoogleFonts.inter(fontSize: 11.sp, fontWeight: FontWeight.w400);
+  static TextStyle interRegular12() =>
+      GoogleFonts.inter(fontSize: 12.sp, fontWeight: FontWeight.w400);
 
-  static TextStyle interBold40 = TextStyle(
-    fontSize: 40.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
+  static TextStyle interRegular14() =>
+      GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w400);
 
-  static TextStyle interBold32 = TextStyle(
-    fontSize: 32.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
+  static TextStyle interRegular16() =>
+      GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w400);
 
-  static TextStyle interBold24 = TextStyle(
-    fontSize: 24.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: -2,
-  );
+  static TextStyle interRegular18() =>
+      GoogleFonts.inter(fontSize: 18.sp, fontWeight: FontWeight.w400);
 
-  static TextStyle interBold20 = TextStyle(
-    fontSize: 20.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interBold18 = TextStyle(
-    fontSize: 18.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interBold16 = TextStyle(
-    fontSize: 16.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interBold14 = TextStyle(
-    fontSize: 14.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interBold12 = TextStyle(
-    fontSize: 12.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold40 = TextStyle(
-    fontSize: 40.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold36 = TextStyle(
-    fontSize: 36.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold28 = TextStyle(
-    fontSize: 28.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold24 = TextStyle(
-    fontSize: 24.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold20 = TextStyle(
-    fontSize: 20.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold18 = TextStyle(
-    fontSize: 18.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold16 = TextStyle(
-    fontSize: 16.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold14 = TextStyle(
-    fontSize: 14.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold12 = TextStyle(
-    fontSize: 12.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold11 = TextStyle(
-    fontSize: 11.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interSemibold16h = TextStyle(
-    fontSize: 16.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter_Semi_Bold',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium32 = TextStyle(
-    fontSize: 32.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium26 = TextStyle(
-    fontSize: 26.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium24 = TextStyle(
-    fontSize: 24.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium20 = TextStyle(
-    fontSize: 20.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium18 = TextStyle(
-    fontSize: 18.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium16 = TextStyle(
-    fontSize: 16.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interMedium14 = TextStyle(
-    fontSize: 14.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Medium',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w500,
-    letterSpacing: 0,
-  );
-  static TextStyle interRegular16 = TextStyle(
-    fontSize: 16.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Regular',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w400,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interRegular14 = TextStyle(
-    fontSize: 14.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Regular',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w400,
-    letterSpacing: 0,
-  );
-
-  static TextStyle interRegular12 = TextStyle(
-    fontSize: 12.sp,
-    decoration: TextDecoration.none,
-    fontFamily: 'Inter-Regular',
-    fontStyle: FontStyle.normal,
-    fontWeight: FontWeight.w400,
-    letterSpacing: 0,
-  );
+  static TextStyle interRegular20() =>
+      GoogleFonts.inter(fontSize: 20.sp, fontWeight: FontWeight.w400);
 }

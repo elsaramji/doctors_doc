@@ -17,29 +17,31 @@ class BordingView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffffffff),
       body: SafeArea(
-        child: Column(
-          children: [
-            context.verticalSpace(21),
-            // DocdocHeader
-            DocHeader(),
-            // OnBordingBody
-            context.verticalSpace(40),
-            OnBordingBody(),
-            // OnBordingDescription
-            context.verticalSpace(18),
-            OnBordingDescription(),
-            // OnBordingButton
-            context.verticalSpace(32),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32.w),
-              child: PrimaryButton(
-                onPressed: () {
-                  getsarted(context);
-                },
-                text: 'Get Started',
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              context.verticalSpace(21),
+              // DocdocHeader
+              DocHeader(),
+              // OnBordingBody
+              context.verticalSpace(40),
+              OnBordingBody(),
+              // OnBordingDescription
+              context.verticalSpace(18),
+              OnBordingDescription(),
+
+              // OnBordingButton
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 32.h),
+                child: PrimaryButton(
+                  onPressed: () {
+                    getsarted(context);
+                  },
+                  text: 'Get Started',
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

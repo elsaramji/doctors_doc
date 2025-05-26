@@ -11,11 +11,11 @@ class DocApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder:
-          (context, child) => MaterialApp.router(
-            debugShowCheckedModeBanner: false,
-            routerConfig: router,
-          ),
+      builder: (context, child) => MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: router,
+        title: 'Doctors Doc',
+      ),
     );
   }
 }
