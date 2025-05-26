@@ -1,19 +1,31 @@
 import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/auth_view_builder.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_devider.dart';
-import 'package:doctors_doc/futures/auth/presentation/widgets/login_form.dart';
-import 'package:doctors_doc/futures/auth/presentation/widgets/login_functions.dart';
-import 'package:doctors_doc/futures/auth/presentation/widgets/login_header.dart';
+import 'package:doctors_doc/futures/auth/presentation/widgets/login_go_signup.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_social_buttons.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_terms.dart';
-import 'package:doctors_doc/shared/presentation/widgets/custom_primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginView extends StatelessWidget {
-  static String route = ConstantRouts.login;
-  LoginView({super.key});
+class AuthView extends StatefulWidget {
+  static String route = ConstantRouts.auth;
+
+  AuthView({super.key});
+
+  @override
+  State<AuthView> createState() => _AuthViewState();
+}
+
+class _AuthViewState extends State<AuthView> {
+  late PageController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = PageController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,24 +45,8 @@ class LoginView extends StatelessWidget {
             // Column to arrange the widgets vertically
             child: Column(
               children: [
-                // Vertical space at the top
-                context.verticalSpace(50),
-                // Login header widget
-                LoginTextHeader(),
-                // Vertical space after the header
-                context.verticalSpace(36),
-                // Login form widget
-                LoginForm(),
-                // Vertical space after the form
-                context.verticalSpace(16),
-                // Login functions widget (e.g., forgot password, remember me)
-                LoginFuctions(),
-                // Vertical space after the functions
-                context.verticalSpace(32),
-                // Primary button for login
-                // This button will trigger the login action
-                PrimaryButton(onPressed: () {}, text: 'Login'),
-                // Vertical space after the primary button
+                AuthViewBuilder(controller: controller),
+                // Vertical space after the login form
                 context.verticalSpace(46),
                 // Divider for social login options
                 LoginDivider(),
@@ -61,11 +57,20 @@ class LoginView extends StatelessWidget {
 
                 // terms and conditions text
                 TermsandConditions(),
+                // Vertical space after the terms and conditions
+                context.verticalSpace(24),
+                GoSignUp(controller: controller),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 }
