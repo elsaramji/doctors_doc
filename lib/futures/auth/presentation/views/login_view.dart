@@ -4,7 +4,6 @@ import 'package:doctors_doc/core/context/dimentions.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_devider.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_form.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_functions.dart';
-import 'package:doctors_doc/futures/auth/presentation/widgets/login_go_signup.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_header.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_social_buttons.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_terms.dart';
@@ -27,48 +26,43 @@ class LoginView extends StatelessWidget {
       // Use SafeArea to avoid system UI overlaps
       body: SafeArea(
         // Use a Container to provide padding and margin
-        child: Container(
-          // Set the padding for the container
-          padding: EdgeInsets.symmetric(horizontal: 24.w),
-          // Column to arrange the widgets vertically
-          child: Column(
-            children: [
-              // Vertical space at the top
-              context.verticalSpace(50),
-              // Login header widget
-              LoginTextHeader(),
-              // Vertical space after the header
-              context.verticalSpace(36),
-              // Login form widget
-              LoginForm(),
-              // Vertical space after the form
-              context.verticalSpace(16),
-              // Login functions widget (e.g., forgot password, remember me)
-              LoginFuctions(),
-              // Vertical space after the functions
-              context.verticalSpace(32),
-              // Primary button for login
-              // This button will trigger the login action
-              PrimaryButton(onPressed: () {}, text: 'Login'),
-              // Vertical space after the primary button
-              context.verticalSpace(46),
-              // Divider for social login options
-              LoginDivider(),
-              // Vertical space after the divider
-              context.verticalSpace(32),
-              // Social buttons for login (e.g., Google, Facebook)
-              LoginSocialButtons(),
-              // Vertical space after the social buttons
-              context.verticalSpace(32),
+        child: SingleChildScrollView(
+          child: Container(
+            // Set the padding for the container
+            padding: EdgeInsets.symmetric(horizontal: 24.w),
+            // Column to arrange the widgets vertically
+            child: Column(
+              children: [
+                // Vertical space at the top
+                context.verticalSpace(50),
+                // Login header widget
+                LoginTextHeader(),
+                // Vertical space after the header
+                context.verticalSpace(36),
+                // Login form widget
+                LoginForm(),
+                // Vertical space after the form
+                context.verticalSpace(16),
+                // Login functions widget (e.g., forgot password, remember me)
+                LoginFuctions(),
+                // Vertical space after the functions
+                context.verticalSpace(32),
+                // Primary button for login
+                // This button will trigger the login action
+                PrimaryButton(onPressed: () {}, text: 'Login'),
+                // Vertical space after the primary button
+                context.verticalSpace(46),
+                // Divider for social login options
+                LoginDivider(),
+                // Vertical space after the divider
+                context.verticalSpace(32),
+                // Social buttons for login (e.g., Google, Facebook)
+                LoginSocialButtons(),
 
-              // terms and conditions text
-              TermsandConditions(),
-              // Vertical space after the terms and conditions
-              context.verticalSpace(24),
-              // Go to sign up widget
-              // This widget will navigate the user to the sign-up page
-              GoSignUp(),
-            ],
+                // terms and conditions text
+                TermsandConditions(),
+              ],
+            ),
           ),
         ),
       ),

@@ -15,11 +15,13 @@ class GoSignUp extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "Already have an account yet? ",
-        style: AppTextStyles.interRegular12.copyWith(color: AppColors.text100),
+        style: AppTextStyles.interRegular11().copyWith(
+          color: AppColors.text100,
+        ),
         children: [
           TextSpan(
             text: "Sign Up",
-            style: AppTextStyles.interRegular12.copyWith(
+            style: AppTextStyles.interSemiBold11().copyWith(
               color: AppColors.primary100,
             ),
             recognizer: TapGestureRecognizer()..onTap = () {},

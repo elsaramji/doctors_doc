@@ -33,7 +33,7 @@ class CustomFormFeild extends StatelessWidget {
       obscureText: obscureText,
 
       cursorColor: AppColors.primary100,
-      style: AppTextStyles.interMedium14.copyWith(
+      style: AppTextStyles.interMedium14().copyWith(
         color: AppColors.text100,
         letterSpacing: 0,
 
@@ -47,8 +47,8 @@ class CustomFormFeild extends StatelessWidget {
         suffixIcon: suffixIcon,
 
         contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 17.h),
-        hintStyle: AppTextStyles.interMedium14.copyWith(
-          color: AppColors.text100,
+        hintStyle: AppTextStyles.interMedium14().copyWith(
+          color: AppColors.text50,
           decoration: TextDecoration.none,
           letterSpacing: 0,
         ),

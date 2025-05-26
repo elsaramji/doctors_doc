@@ -22,9 +22,9 @@ class LoginDivider extends StatelessWidget {
           child: Center(
             child: Text(
               "Or Sign In With",
-              style: AppTextStyles.interRegular12.copyWith(
+              style: AppTextStyles.interRegular12().copyWith(
                 color: AppColors.specialGray,
-                letterSpacing: 0.1,
+                letterSpacing: 0,
               ),
             ),
           ),
