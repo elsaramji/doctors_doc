@@ -19,13 +19,13 @@ class LoginTextHeader extends StatelessWidget {
         children: [
           Text(
             "Welcome Back",
-            style: AppTextStyles.interBold24.copyWith(
+            style: AppTextStyles.interBold24().copyWith(
               color: AppColors.primary100,
             ),
           ),
           Text(
             "We're excited to have you back, can't wait to see what you've been up to since you last \nlogged in.",
-            style: AppTextStyles.interRegular14.copyWith(
+            style: AppTextStyles.interRegular14().copyWith(
               color: AppColors.textbody,
               letterSpacing: 0.1,
               height: 1.8,

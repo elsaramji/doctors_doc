@@ -4,8 +4,6 @@ import 'package:doctors_doc/core/context/dimentions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-
 /// A custom primary button widget that can be used throughout the application.
 /// It is a stateless widget that takes an optional callback function and a text string.
 /// This button is styled with a rounded rectangle shape, a minimum size, and a primary color background.
@@ -21,9 +19,10 @@ class PrimaryButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: AppTextStyles.interSemibold16.copyWith(color: Colors.white),
+        style: AppTextStyles.interSemiBold16().copyWith(color: Colors.white),
       ),
       style: ButtonStyle(
+        overlayColor: WidgetStatePropertyAll(AppColors.secondaryfillred),
         shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)),
         ),

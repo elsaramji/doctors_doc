@@ -33,7 +33,7 @@ class _LoginFuctionsState extends State<LoginFuctions> {
         ),
         Text(
           "Remember me",
-          style: AppTextStyles.interRegular12.copyWith(
+          style: AppTextStyles.interRegular12().copyWith(
             color: AppColors.specialGray,
           ),
         ),
@@ -41,7 +41,7 @@ class _LoginFuctionsState extends State<LoginFuctions> {
         GestureDetector(
           child: Text(
             "Forgot Password?",
-            style: AppTextStyles.interRegular12.copyWith(
+            style: AppTextStyles.interRegular12().copyWith(
               color: AppColors.primary100,
             ),
           ),
