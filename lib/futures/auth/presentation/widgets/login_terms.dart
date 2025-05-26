@@ -1,7 +1,5 @@
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/config/themes/texts_styles.dart';
-import 'package:doctors_doc/core/context/dimentions.dart';
-import 'package:doctors_doc/futures/auth/presentation/widgets/login_go_signup.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,43 +14,36 @@ class TermsandConditions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 21.w, vertical: 24.h),
-      child: Column(
-        children: [
-          Text.rich(
-            textAlign: TextAlign.center,
+      child: Text.rich(
+        textAlign: TextAlign.center,
+        TextSpan(
+          text: "By signing in, you agree to our ",
+          style: AppTextStyles.interRegular11().copyWith(
+            color: AppColors.text60,
+          ),
+          children: [
             TextSpan(
-              text: "By signing in, you agree to our ",
+              text: "Terms & Conditions",
+              style: AppTextStyles.interSemiBold11().copyWith(
+                color: AppColors.text100,
+              ),
+              recognizer: TapGestureRecognizer()..onTap = () {},
+            ),
+            TextSpan(
+              text: " and ",
               style: AppTextStyles.interRegular11().copyWith(
                 color: AppColors.text60,
               ),
-              children: [
-                TextSpan(
-                  text: "Terms & Conditions",
-                  style: AppTextStyles.interSemiBold11().copyWith(
-                    color: AppColors.text100,
-                  ),
-                  recognizer: TapGestureRecognizer()..onTap = () {},
-                ),
-                TextSpan(
-                  text: " and ",
-                  style: AppTextStyles.interRegular11().copyWith(
-                    color: AppColors.text60,
-                  ),
-                ),
-                TextSpan(
-                  text: "Privacy Policy.",
-                  style: AppTextStyles.interSemiBold11().copyWith(
-                    color: AppColors.text100,
-                  ),
-                  recognizer: TapGestureRecognizer()..onTap = () {},
-                ),
-              ],
             ),
-          ),
-          context.verticalSpace(24),
-          // This widget is used to prompt users to sign up if they haven't done so yet.
-          GoSignUp(),
-        ],
+            TextSpan(
+              text: "Privacy Policy.",
+              style: AppTextStyles.interSemiBold11().copyWith(
+                color: AppColors.text100,
+              ),
+              recognizer: TapGestureRecognizer()..onTap = () {},
+            ),
+          ],
+        ),
       ),
     );
   }
