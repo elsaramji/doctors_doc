@@ -1,6 +1,8 @@
+import 'package:doctors_doc/futures/auth/presentation/regsiter_cubit/regsiter_cubit.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/craate_account_view.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthViewBuilder extends StatelessWidget {
@@ -12,14 +14,14 @@ class AuthViewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 0.566.sh,
-
+        
       child: PageView(
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Login by email view
           const LoginByEmailView(),
-
+        
           // Add other login methods here if needed
           CreateAccountbyEmailView(),
         ],
