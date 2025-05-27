@@ -1,4 +1,3 @@
-
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
 import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
@@ -6,7 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CreateAccountForm extends StatefulWidget {
-  const CreateAccountForm({super.key});
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final TextEditingController phoneController;
+  const CreateAccountForm({
+    super.key,
+    required this.emailController,
+    required this.passwordController,
+    required this.phoneController,
+  });
 
   @override
   State<CreateAccountForm> createState() => _CreateAccountFormState();
@@ -20,6 +27,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
       child: Column(
         children: [
           CustomFormFeild(
+            controller: widget.emailController,
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.emailAddress,
             hintText: "Email",
@@ -27,6 +35,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+            controller: widget.passwordController,
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.visiblePassword,
             hintText: "Password",
@@ -50,6 +59,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+            controller: widget.phoneController,
             textInputAction: TextInputAction.done,
             textInputType: TextInputType.phone,
             hintText: "Phone Number",
