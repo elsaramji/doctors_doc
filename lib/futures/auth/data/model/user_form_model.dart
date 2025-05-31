@@ -1,6 +1,6 @@
 import 'package:doctors_doc/futures/auth/domain/enitties/user_form_enitty.dart';
 
-class UserFormModel implements UserFormEnitty {
+class UserFormModel implements RegisterUserFormEnitty {
   String email;
   String password;
   String name;
