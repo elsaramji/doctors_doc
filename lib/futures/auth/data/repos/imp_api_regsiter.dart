@@ -13,7 +13,7 @@ class ImpApiRegsiter implements ApiRegsiter {
   @override
   Future<Either<ResponsEnitty, ErrorModel>> sginup(
     DioFactory diofactory,
-    UserFormEnitty userForm,
+    RegisterUserFormEnitty userForm,
   ) async {
     try {
       Response? respons = await diofactory.post(

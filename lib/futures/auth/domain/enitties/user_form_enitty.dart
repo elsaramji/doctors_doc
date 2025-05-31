@@ -1,10 +1,10 @@
-abstract class UserFormEnitty {
+abstract class  RegisterUserFormEnitty {
   final String email;
   final String password;
   final String? phone;
   final String? name;
 
-  UserFormEnitty({
+  RegisterUserFormEnitty({
     required this.email,
     required this.password,
     this.phone,
