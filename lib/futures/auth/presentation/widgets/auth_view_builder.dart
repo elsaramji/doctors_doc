@@ -1,8 +1,6 @@
-import 'package:doctors_doc/futures/auth/presentation/regsiter_cubit/regsiter_cubit.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/craate_account_view.dart';
 import 'package:doctors_doc/futures/auth/presentation/widgets/login_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthViewBuilder extends StatelessWidget {

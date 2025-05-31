@@ -8,11 +8,14 @@ class CreateAccountForm extends StatefulWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final TextEditingController phoneController;
+  final GlobalKey<FormState> formKey;
+  // Constructor to initialize the controllers
   const CreateAccountForm({
     super.key,
     required this.emailController,
     required this.passwordController,
     required this.phoneController,
+    required this.formKey,
   });
 
   @override
@@ -21,12 +24,27 @@ class CreateAccountForm extends StatefulWidget {
 
 class _CreateAccountFormState extends State<CreateAccountForm> {
   bool isObscure = true;
+  String selectedCountryCode = "";
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: widget.formKey,
+      autovalidateMode: AutovalidateMode.onUnfocus,
       child: Column(
         children: [
           CustomFormFeild(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Email is required";
+              }
+              if (!RegExp(
+                r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+              ).hasMatch(value)) {
+                return "Please enter a valid email address";
+              }
+              return null;
+            },
             controller: widget.emailController,
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.emailAddress,
@@ -35,6 +53,16 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Password is required";
+              }
+              if (value.length < 6) {
+                return "Password must be at least 6 characters";
+              }
+              // Add more validation if needed
+              return null;
+            },
             controller: widget.passwordController,
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.visiblePassword,
@@ -59,6 +87,16 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Phone number is required";
+              }
+              if (value.length < 10) {
+                return "Phone number must be at least 10 digits";
+              }
+              // Add more validation if needed
+              return null;
+            },
             controller: widget.phoneController,
             textInputAction: TextInputAction.done,
             textInputType: TextInputType.phone,
@@ -68,7 +106,24 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(width: 24),
-                Icon(Icons.drag_indicator_rounded),
+                DropdownButton(
+                  underline: const SizedBox(),
+                  value: selectedCountryCode,
+                  icon: const Icon(Icons.arrow_drop_down_outlined),
+                  items: [
+                    DropdownMenuItem(child: Text("Select Country"), value: ""),
+                    DropdownMenuItem(child: Text("Egypt"), value: "+20"),
+                    DropdownMenuItem(child: Text("UAE"), value: "+2"),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      selectedCountryCode = value ?? "";
+                      widget.phoneController.text =
+                          "$selectedCountryCode${widget.phoneController.text.replaceAll(' ', '')}";
+                    });
+                  },
+                ),
+                SizedBox(width: 8.w),
               ],
             ),
           ),
