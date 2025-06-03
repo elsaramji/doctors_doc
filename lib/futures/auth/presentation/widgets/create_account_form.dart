@@ -1,5 +1,6 @@
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
+import 'package:doctors_doc/futures/auth/presentation/functions/validator.dart';
 import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,15 +36,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
         children: [
           CustomFormFeild(
             validator: (value) {
-              if (value == null || value.isEmpty) {
-                return "Email is required";
-              }
-              if (!RegExp(
-                r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
-              ).hasMatch(value)) {
-                return "Please enter a valid email address";
-              }
-              return null;
+              return emailValidator(value);
             },
             controller: widget.emailController,
             textInputAction: TextInputAction.next,
@@ -54,14 +47,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           context.verticalSpace(16),
           CustomFormFeild(
             validator: (value) {
-              if (value == null || value.isEmpty) {
-                return "Password is required";
-              }
-              if (value.length < 6) {
-                return "Password must be at least 6 characters";
-              }
-              // Add more validation if needed
-              return null;
+              return passwordValidator(value);
             },
             controller: widget.passwordController,
             textInputAction: TextInputAction.next,
@@ -88,14 +74,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           context.verticalSpace(16),
           CustomFormFeild(
             validator: (value) {
-              if (value == null || value.isEmpty) {
-                return "Phone number is required";
-              }
-              if (value.length < 10) {
-                return "Phone number must be at least 10 digits";
-              }
-              // Add more validation if needed
-              return null;
+              return phoneValidator(value);
             },
             controller: widget.phoneController,
             textInputAction: TextInputAction.done,

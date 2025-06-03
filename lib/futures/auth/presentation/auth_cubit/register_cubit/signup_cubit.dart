@@ -25,6 +25,7 @@ class SignupCubit extends Cubit<SignupState> {
         password: password,
         name: name,
         phone: phone,
+        confirmPassword: password,
       ),
     );
     response.fold((l) => emit(SignupSuccess(l)), (r) => emit(SignupError(r)));
