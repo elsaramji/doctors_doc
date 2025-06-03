@@ -15,8 +15,8 @@ class SigninCubit extends Cubit<SigninState> {
   login({required String email, required String password}) async {
     emit(SigninLoading());
     final response = await ImpApiLogin().login(
-      LoginUserFormModel(email: email, password: password),
       getIt<DioFactory>(),
+      LoginUserFormModel(email: email, password: password),
     );
     response.fold((l) => emit(SigninError(l)), (r) => emit(SigninSuccess(r)));
   }

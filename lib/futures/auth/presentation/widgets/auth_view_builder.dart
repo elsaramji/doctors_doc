@@ -12,14 +12,14 @@ class AuthViewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 0.566.sh,
-        
+
       child: PageView(
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Login by email view
-          const LoginByEmailView(),
-        
+          LoginByEmailView(),
+
           // Add other login methods here if needed
           CreateAccountbyEmailView(),
         ],
