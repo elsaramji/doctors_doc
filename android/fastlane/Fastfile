@@ -2,6 +2,7 @@
 platform :android do
     desc "upload a build to Firebase App Distribution"
     lane :deploy_to_firebase_app_distribution do
+        sh "cd.."
         sh "flutter clean"
         sh "flutter build apk --release --no-tree-shake-icons"
         release = firebase_app_distribution(
