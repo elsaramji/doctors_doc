@@ -2,7 +2,7 @@ name: Distribute to Firebase APK Development v2
 on:
   push:
     branches:
-      - futures/login_with_apis
+      - stating
 
 jobs:
   distribute_to_firebase:
