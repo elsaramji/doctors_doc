@@ -30,8 +30,11 @@ jobs:
         
     - name: Build and Distribute App
       env:
-        FIREBASE_CLI_TOKEN: ${{ secrets.CLI_TOKEN}}
+        FIREBASE_CLI_TOKEN: ${{ secrets.CLI_TOKEN }}
       run: |
-        bundle exec fastlane android deploy_to_firebase_app_distribution
+            bundle config set --local force_ruby_platform true
+            bundle install
+            bundle exec fastlane android deploy_to_firebase_app_distribution
       working-directory: android
+
 
