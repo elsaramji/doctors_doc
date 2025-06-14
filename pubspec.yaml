@@ -4,7 +4,7 @@ description: "A new Flutter project."
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 0.1.1
 
 environment:
   sdk: 3.8.0
@@ -19,6 +19,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   dio: ^5.8.0+1
+  firebase_core: ^3.14.0
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
