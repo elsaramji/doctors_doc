@@ -1,4 +1,4 @@
-name: Distribute to Firebase APK Development
+name: Distribute to Firebase APK Development v2
 on:
   push:
     branches:
