@@ -10,7 +10,7 @@ platform :android do
             android_artifact_type: "APK",
             android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
             testers: "elsaramegymahmoud404@gmail.com,",
-            release_notes: "auth future version"
+            release_notes: "auth future version 0.2.1"
         )
     end
 end
