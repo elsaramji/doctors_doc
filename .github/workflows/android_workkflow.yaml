@@ -26,12 +26,15 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.4.0"
+          ruby-version: "3.4.4"
           bundler-cache: true
           working-directory: android
 
       - name: Install Fastlane & Plugins
         run: |
+          gem update --system
+          gem install bundler
+          gem install fastlane
           bundle install
         working-directory: android
 
