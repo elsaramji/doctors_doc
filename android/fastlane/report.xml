@@ -4,20 +4,5 @@
     
     
     
-      
-      <testcase classname="fastlane.lanes" name="0: flutter clean" time="1.7367971">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="1: flutter build apk --release --no-tree-shake-icons" time="41.2783062">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: firebase_app_distribution" time="104.7306528">
-        
-      </testcase>
-    
   </testsuite>
 </testsuites>
