@@ -27,7 +27,10 @@ jobs:
         ruby-version: "3.4.4"
         bundler-cache: true
         working-directory: android
-        
+    - name: Install Fastlane Plugin
+      run: |
+        fastlane add_plugin firebase_app_distribution
+      working-directory: android
     - name: Build and Distribute App
       env:
         FIREBASE_CLI_TOKEN: ${{secrets.CLI_TOKEN }}
