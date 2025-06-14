@@ -2,8 +2,7 @@ name: Distribute to Firebase APK Development
 on:
   push:
     branches:
-      - main
-      - stating
+      - futures/login_with_apis
 jobs:
   distribute_to_firebase:
     runs-on: ubuntu-latest
