@@ -1,12 +1,33 @@
+<<<<<<< HEAD
 
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
+=======
+import 'package:doctors_doc/config/themes/colors.dart';
+import 'package:doctors_doc/core/context/dimentions.dart';
+import 'package:doctors_doc/futures/auth/presentation/functions/validator.dart';
+>>>>>>> origin/stating
 import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CreateAccountForm extends StatefulWidget {
+<<<<<<< HEAD
   const CreateAccountForm({super.key});
+=======
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final TextEditingController phoneController;
+  final GlobalKey<FormState> formKey;
+  // Constructor to initialize the controllers
+  const CreateAccountForm({
+    super.key,
+    required this.emailController,
+    required this.passwordController,
+    required this.phoneController,
+    required this.formKey,
+  });
+>>>>>>> origin/stating
 
   @override
   State<CreateAccountForm> createState() => _CreateAccountFormState();
@@ -14,12 +35,29 @@ class CreateAccountForm extends StatefulWidget {
 
 class _CreateAccountFormState extends State<CreateAccountForm> {
   bool isObscure = true;
+<<<<<<< HEAD
   @override
   Widget build(BuildContext context) {
     return Form(
       child: Column(
         children: [
           CustomFormFeild(
+=======
+  String selectedCountryCode = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: widget.formKey,
+      autovalidateMode: AutovalidateMode.onUnfocus,
+      child: Column(
+        children: [
+          CustomFormFeild(
+            validator: (value) {
+              return emailValidator(value);
+            },
+            controller: widget.emailController,
+>>>>>>> origin/stating
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.emailAddress,
             hintText: "Email",
@@ -27,6 +65,13 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+<<<<<<< HEAD
+=======
+            validator: (value) {
+              return passwordValidator(value);
+            },
+            controller: widget.passwordController,
+>>>>>>> origin/stating
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.visiblePassword,
             hintText: "Password",
@@ -50,6 +95,13 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
+<<<<<<< HEAD
+=======
+            validator: (value) {
+              return phoneValidator(value);
+            },
+            controller: widget.phoneController,
+>>>>>>> origin/stating
             textInputAction: TextInputAction.done,
             textInputType: TextInputType.phone,
             hintText: "Phone Number",
@@ -58,7 +110,28 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(width: 24),
+<<<<<<< HEAD
                 Icon(Icons.drag_indicator_rounded),
+=======
+                DropdownButton(
+                  underline: const SizedBox(),
+                  value: selectedCountryCode,
+                  icon: const Icon(Icons.arrow_drop_down_outlined),
+                  items: [
+                    DropdownMenuItem(child: Text("Select Country"), value: ""),
+                    DropdownMenuItem(child: Text("Egypt"), value: "+20"),
+                    DropdownMenuItem(child: Text("UAE"), value: "+2"),
+                  ],
+                  onChanged: (value) {
+                    setState(() {
+                      selectedCountryCode = value ?? "";
+                      widget.phoneController.text =
+                          "$selectedCountryCode${widget.phoneController.text.replaceAll(' ', '')}";
+                    });
+                  },
+                ),
+                SizedBox(width: 8.w),
+>>>>>>> origin/stating
               ],
             ),
           ),

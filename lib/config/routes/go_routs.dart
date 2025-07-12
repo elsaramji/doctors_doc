@@ -3,6 +3,7 @@
 import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/futures/auth/presentation/views/auth_view.dart';
 import 'package:doctors_doc/futures/bording/presentation/views/bording_view.dart';
+import 'package:doctors_doc/futures/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,6 +20,13 @@ final GoRouter router = GoRouter(
       path: ConstantRouts.auth,
       pageBuilder: (context, state) => _easyTransition(AuthView()),
     ),
+<<<<<<< HEAD
+=======
+    GoRoute(
+      path: ConstantRouts.home,
+      pageBuilder: (context, state) => _easyTransition(const HomeView()),
+    ),
+>>>>>>> origin/stating
   ],
 );
 
