@@ -27,7 +27,7 @@
 ## 🧱 Architecture
 
 The app is built using **modular Clean Architecture** with a clear separation of concerns:
-
+```bash
 lib/
 ├── core/
 │ ├── di/
@@ -51,6 +51,7 @@ lib/
 │ └── domain/
 └── main_dev.dart
 └── main_prod.dart
+```
 
 - **Presentation Layer** – Flutter widgets & Riverpod for state management.
 - **Domain Layer** – Business logic with pure Dart.
