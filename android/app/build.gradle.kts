@@ -1,7 +1,18 @@
 plugins {
     id("com.android.application")
     // START: FlutterFire Configuration
-    id("com.google.gms.google-services")
+    // stop it to work flovers packag name
+    /*
+    please remove this comment start by << 
+    when you  use  firebase app distribution or firebase service or build release app.
+    See Bug 
+    ///////////////
+    * What went wrong:
+    Execution failed for task ':app:processProductionReleaseGoogleServices'.
+    > No matching client found for package name 'com.example.doctors_doc.production'
+    ///////////////
+    */
+    //<< id("com.google.gms.google-services")
     // END: FlutterFire Configuration
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
@@ -40,6 +51,24 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+     flavorDimensions += "default"
+    productFlavors {
+        create("development") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Doctors Doc Dev")
+                applicationIdSuffix = ".dev"
+        }
+        create("production") {
+            dimension = "default"
+             resValue(
+                type = "string",
+                name = "app_name",
+                value = "Doctors Doc")
+        }
+}
 }
 
 flutter {
