@@ -18,11 +18,7 @@ class AuthViewBuilder extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           // Login by email view
-<<<<<<< HEAD
-          const LoginByEmailView(),
-=======
           LoginByEmailView(),
->>>>>>> origin/stating
 
           // Add other login methods here if needed
           CreateAccountbyEmailView(),

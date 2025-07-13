@@ -4,11 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-<<<<<<< HEAD
-=======
   WidgetsFlutterBinding.ensureInitialized();
   setupGetIt();
->>>>>>> origin/stating
   await ScreenUtil.ensureScreenSize();
   runApp(DocApp());
 }

@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-
-import 'package:doctors_doc/config/themes/colors.dart';
-import 'package:doctors_doc/core/context/dimentions.dart';
-=======
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
 import 'package:doctors_doc/futures/auth/presentation/functions/validator.dart';
->>>>>>> origin/stating
 import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CreateAccountForm extends StatefulWidget {
-<<<<<<< HEAD
-  const CreateAccountForm({super.key});
-=======
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final TextEditingController phoneController;
@@ -27,7 +18,6 @@ class CreateAccountForm extends StatefulWidget {
     required this.phoneController,
     required this.formKey,
   });
->>>>>>> origin/stating
 
   @override
   State<CreateAccountForm> createState() => _CreateAccountFormState();
@@ -35,14 +25,6 @@ class CreateAccountForm extends StatefulWidget {
 
 class _CreateAccountFormState extends State<CreateAccountForm> {
   bool isObscure = true;
-<<<<<<< HEAD
-  @override
-  Widget build(BuildContext context) {
-    return Form(
-      child: Column(
-        children: [
-          CustomFormFeild(
-=======
   String selectedCountryCode = "";
 
   @override
@@ -57,7 +39,6 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               return emailValidator(value);
             },
             controller: widget.emailController,
->>>>>>> origin/stating
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.emailAddress,
             hintText: "Email",
@@ -65,26 +46,20 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
-<<<<<<< HEAD
-=======
             validator: (value) {
               return passwordValidator(value);
             },
             controller: widget.passwordController,
->>>>>>> origin/stating
             textInputAction: TextInputAction.next,
             textInputType: TextInputType.visiblePassword,
             hintText: "Password",
             obscureText: isObscure,
             suffixIcon: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
-              child: GestureDetector(
-                onTap: () {
                   isObscure = !isObscure;
                   setState(() {});
                 },
                 child: Icon(
-                  size: 24,
                   isObscure
                       ? Icons.visibility_off_outlined
                       : Icons.visibility_outlined,
@@ -95,24 +70,15 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           ),
           context.verticalSpace(16),
           CustomFormFeild(
-<<<<<<< HEAD
-=======
             validator: (value) {
-              return phoneValidator(value);
-            },
             controller: widget.phoneController,
->>>>>>> origin/stating
             textInputAction: TextInputAction.done,
             textInputType: TextInputType.phone,
-            hintText: "Phone Number",
             obscureText: false,
             prefix: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(width: 24),
-<<<<<<< HEAD
-                Icon(Icons.drag_indicator_rounded),
-=======
                 DropdownButton(
                   underline: const SizedBox(),
                   value: selectedCountryCode,
@@ -131,7 +97,6 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                   },
                 ),
                 SizedBox(width: 8.w),
->>>>>>> origin/stating
               ],
             ),
           ),
