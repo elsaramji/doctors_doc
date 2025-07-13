@@ -56,10 +56,13 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
             obscureText: isObscure,
             suffixIcon: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: GestureDetector(
+                onTap: () {
                   isObscure = !isObscure;
                   setState(() {});
                 },
                 child: Icon(
+                  size: 24,
                   isObscure
                       ? Icons.visibility_off_outlined
                       : Icons.visibility_outlined,
@@ -71,9 +74,12 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
           context.verticalSpace(16),
           CustomFormFeild(
             validator: (value) {
+              return phoneValidator(value);
+            },
             controller: widget.phoneController,
             textInputAction: TextInputAction.done,
             textInputType: TextInputType.phone,
+            hintText: "Phone Number",
             obscureText: false,
             prefix: Row(
               mainAxisSize: MainAxisSize.min,

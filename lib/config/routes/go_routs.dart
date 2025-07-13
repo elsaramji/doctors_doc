@@ -20,13 +20,10 @@ final GoRouter router = GoRouter(
       path: ConstantRouts.auth,
       pageBuilder: (context, state) => _easyTransition(AuthView()),
     ),
-<<<<<<< HEAD
-=======
     GoRoute(
       path: ConstantRouts.home,
       pageBuilder: (context, state) => _easyTransition(const HomeView()),
     ),
->>>>>>> origin/stating
   ],
 );
 

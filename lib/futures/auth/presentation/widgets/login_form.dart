@@ -1,9 +1,6 @@
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/core/context/dimentions.dart';
-<<<<<<< HEAD
-=======
 import 'package:doctors_doc/futures/auth/presentation/functions/validator.dart';
->>>>>>> origin/stating
 import 'package:doctors_doc/shared/presentation/widgets/custom_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,9 +9,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 /// It also includes a visibility toggle for the password field.
 /// /// The widget uses a custom form field widget for input fields and handles the visibility of the password field.
 class LoginForm extends StatefulWidget {
-<<<<<<< HEAD
-  const LoginForm({super.key});
-=======
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final GlobalKey<FormState> formKey;
@@ -24,7 +18,6 @@ class LoginForm extends StatefulWidget {
     required this.passwordController,
     required this.formKey,
   });
->>>>>>> origin/stating
 
   @override
   State<LoginForm> createState() => _LoginFormState();

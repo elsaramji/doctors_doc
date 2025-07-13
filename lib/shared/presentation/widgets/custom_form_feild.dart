@@ -63,8 +63,6 @@ class CustomFormFeild extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.r),
           borderSide: BorderSide(color: AppColors.primary100, width: 1.w),
         ),
-<<<<<<< HEAD
-=======
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
           borderSide: BorderSide(color: AppColors.secondaryfillred, width: 1.w),
@@ -73,7 +71,6 @@ class CustomFormFeild extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.r),
           borderSide: BorderSide(color: AppColors.secondaryfillred, width: 1.w),
         ),
->>>>>>> origin/stating
       ),
     );
   }

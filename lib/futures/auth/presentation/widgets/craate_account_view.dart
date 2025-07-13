@@ -8,11 +8,11 @@ import 'package:doctors_doc/futures/auth/presentation/widgets/create_account_for
 import 'package:doctors_doc/futures/auth/presentation/widgets/signup_header.dart';
 import 'package:doctors_doc/shared/presentation/widgets/custom_primary_button.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CreateAccountbyEmailView extends StatelessWidget {
-  const CreateAccountbyEmailView({super.key});
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final Dio dio = Dio(
@@ -78,3 +78,4 @@ class CreateAccountbyEmailView extends StatelessWidget {
       ),
     );
   }
+}
