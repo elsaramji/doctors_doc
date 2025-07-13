@@ -11,6 +11,15 @@
 
 ---
 
+## 🔗 Try It Out
+
+You can try the Auth With Api from the link below:
+
+👉 **[Live Demo](https://appetize.io/app/b_444qr5jr4x3bywkg2agvrfx2qi)**  
+> 📱 Best viewed on mobile devices
+
+---
+
 ## 🎯 Key Features
 
 - 🗓️ **Appointment Management** – Book, reschedule, and cancel medical appointments.
