@@ -1,6 +1,6 @@
-class ErrorModel {
+class Failuer {
   final String message;
   final int? code;
 
-  ErrorModel({required this.message, this.code});
+  Failuer({required this.message, this.code});
 }

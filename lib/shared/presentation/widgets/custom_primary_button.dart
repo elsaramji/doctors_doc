@@ -1,6 +1,6 @@
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/config/themes/texts_styles.dart';
-import 'package:doctors_doc/core/context/dimentions.dart';
+import 'package:doctors_doc/core/extensions/dimentions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

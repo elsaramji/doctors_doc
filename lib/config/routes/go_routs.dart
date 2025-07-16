@@ -1,9 +1,9 @@
 // routes.dart
 
 import 'package:doctors_doc/config/routes/constant_routs.dart';
-import 'package:doctors_doc/futures/auth/presentation/views/auth_view.dart';
-import 'package:doctors_doc/futures/bording/presentation/views/bording_view.dart';
-import 'package:doctors_doc/futures/home/presentation/views/home_view.dart';
+import 'package:doctors_doc/features/auth/presentation/views/auth_view.dart';
+import 'package:doctors_doc/features/bording/presentation/views/bording_view.dart';
+import 'package:doctors_doc/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
