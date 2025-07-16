@@ -62,7 +62,7 @@ lib/
 └── main_prod.dart
 ```
 
-- **Presentation Layer** – Flutter widgets & Riverpod for state management.
+- **Presentation Layer** – Flutter widgets & Bloc for state management.
 - **Domain Layer** – Business logic with pure Dart.
 - **Data Layer** – Repositories, API clients, and Firebase services.
 
