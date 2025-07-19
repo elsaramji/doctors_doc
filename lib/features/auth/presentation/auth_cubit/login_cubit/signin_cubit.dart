@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:doctors_doc/core/apis/dio_factory.dart';
 import 'package:doctors_doc/core/di/get_it_injection.dart';
-import 'package:doctors_doc/core/errors/error_model.dart';
+import 'package:doctors_doc/core/errors/failuer.dart';
 import 'package:doctors_doc/features/auth/data/model/login_user_form_model.dart';
 import 'package:doctors_doc/features/auth/data/repos/imp_api_login.dart';
 import 'package:doctors_doc/features/auth/domain/enitties/respons_enitty.dart';

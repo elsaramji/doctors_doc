@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:doctors_doc/core/errors/error_model.dart';
+import 'package:doctors_doc/core/errors/failuer.dart';
 
 class DioErrorHandel {
   static Failuer errorSelector(Response? response) {
