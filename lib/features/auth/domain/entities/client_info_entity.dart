@@ -4,7 +4,7 @@ class ClientInfoEntity {
   final String? confirmPassword;
   final String? phone;
   final String? name;
-  final String? gender;
+  final int? gender;
 
   const ClientInfoEntity({
     this.email,
