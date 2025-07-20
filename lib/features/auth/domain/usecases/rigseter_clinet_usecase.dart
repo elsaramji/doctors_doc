@@ -4,9 +4,9 @@ import 'package:doctors_doc/features/auth/domain/entities/client_info_entity.dar
 import 'package:doctors_doc/features/auth/domain/entities/clinet_response_entity.dart';
 import 'package:doctors_doc/features/auth/domain/repositories/auth_repos.dart';
 
-class RegisterClinetUsecase {
+class RigseterClinetUsecase {
   final AuthRepos authRepos;
-  RegisterClinetUsecase(this.authRepos);
+  RigseterClinetUsecase({required this.authRepos});
 
   Future<Either<Failuer, ClinetResponseEntity>> call({
     required ClientInfoEntity clientInfoEntity,
