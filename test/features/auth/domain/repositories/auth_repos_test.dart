@@ -16,37 +16,42 @@ import 'auth_repos_test.mocks.dart';
 )
 // void main() {}
 void main() {
-  // MocksAuthRepos mockAuthRepos 
+  // MocksAuthRepos mockAuthRepos
   AuthRepos mockAuthRepos = MocksAuthRepos();
   // clientInfoEntity clientInfoEntity
   ClientInfoEntity clientInfoEntity = ClientInfoEntity();
- // String email for test
+
+  ClinetResponseEntity clinetResponseEntity = ClinetResponseEntity(
+    massage: 'massage',
+    data: {},
+  );
+  // String email for test
   String temail = 'email';
   // String password for test
   String tpassword = 'password';
 
-// AuthRepos test mocks group
+  // AuthRepos test mocks group
   group('AuthRepos', () {
     // registerClinet test  mocks
     test('registerClinet', () async {
       // chack if registerClinet return ClinetResponseEntity
       when(
         mockAuthRepos.registerClinet(clientInfoEntity),
-      ).thenAnswer((_) async => Right(ClinetResponseEntity()));
+      ).thenAnswer((_) async => right(clinetResponseEntity));
       // chack if registerClinet result is a Either
       final result = await mockAuthRepos.registerClinet(clientInfoEntity);
       // chack if registerClinet result is a Either
-      expect(result, Right(isA<ClinetResponseEntity>()));
+      expect(result, isA<Right<Failuer, ClinetResponseEntity>>());
     });
     test('loginClinet', () async {
       when(
         mockAuthRepos.loginClinet(email: temail, password: tpassword),
-      ).thenAnswer((_) async => Right(ClinetResponseEntity()));
+      ).thenAnswer((_) async => right(clinetResponseEntity));
       final result = await mockAuthRepos.loginClinet(
         email: temail,
         password: tpassword,
       );
-      expect(result, isA<Either<Failuer, ClinetResponseEntity>>());
+      expect(result, isA<Right<Failuer, ClinetResponseEntity>>());
     });
   });
 }
