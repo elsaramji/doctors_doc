@@ -1,4 +1,5 @@
 import 'package:doctors_doc/config/images/images_path.dart';
+import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +10,6 @@ class DoctorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       width: 1.sw,
       height: 126.h,
       child: Row(
@@ -20,7 +20,7 @@ class DoctorCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12.r),
               image: DecorationImage(
-                image: AssetImage(Assets.assetsImagesOnBordingPatient),
+                image: AssetImage(Assets.assetsImagesBackgroundHomeBordering),
                 fit: BoxFit.fill,
               ),
             ),
@@ -31,10 +31,30 @@ class DoctorCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Dr. John Doe", style: AppTextStyles.interSemiBold16()),
-              Text(
-                "General Practitioner",
-                style: AppTextStyles.interRegular12(),
+              Row(
+                children: [
+                  Text(
+                    "Speciality|",
+                    style: AppTextStyles.interMedium12(
+                      color: AppColors.textBody,
+                    ),
+                  ),
+                  SizedBox(width: 8.w),
+                  Text(
+                    "Price\$200",
+                    style: AppTextStyles.interMedium12(
+                      color: AppColors.textBody,
+                    ),
+                  ),
+                ],
               ),
+
+              //address
+              Text(
+                "21, Main Street, New York, NY 10001",
+                style: AppTextStyles.interMedium12(color: AppColors.textBody),
+              ),
+
               SizedBox(height: 8.h),
             ],
           ),

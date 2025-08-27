@@ -1,5 +1,6 @@
-import 'package:doctors_doc/config/themes/texts_styles.dart';
-import 'package:doctors_doc/features/home/data/models/specialty_model.dart';
+import 'package:doctors_doc/features/home/presentation/models/specialty_ui_model.dart';
+import 'package:doctors_doc/features/home/presentation/views/home_view.dart';
+import 'package:doctors_doc/features/home/presentation/widgets/see_more_header.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/speciality_category_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,18 +15,7 @@ class HomeSpecialityList extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16.h),
       child: Column(
         children: [
-          Row(
-            children: [
-              Text("Doctor Speciality", style: AppTextStyles.interSemiBold18()),
-              Spacer(),
-              /* Text(
-                "View All",
-                style: AppTextStyles.interRegular12().copyWith(
-                  color: AppColors.primary100,
-                ),
-              ),*/
-            ],
-          ),
+          SeeMoreHeader(title: "Speciality", isViewAll: false),
           SizedBox(height: 16.h),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -35,7 +25,7 @@ class HomeSpecialityList extends StatelessWidget {
               children: List.generate(
                 specialtyList.length,
                 (index) =>
-                    SpecialityWidget(specialtyEntity: specialtyList[index]),
+                    SpecialityWidget(specialtyUiModel: specialtyList[index]),
               ),
             ),
           ),

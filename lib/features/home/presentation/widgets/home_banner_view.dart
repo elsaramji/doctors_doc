@@ -17,7 +17,7 @@ class HomeBanner extends StatelessWidget {
           child: Container(
             height: 167.h,
             child: Image.asset(
-              Assets.assetsImagesOnBordingPatient,
+              Assets.assetsImagesBackgroundHomeBordering,
               fit: BoxFit.fill,
             ),
           ),

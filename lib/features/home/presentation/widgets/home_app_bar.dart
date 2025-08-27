@@ -17,7 +17,7 @@ class HomeAppBar extends StatelessWidget {
         minVerticalPadding: 16.h,
         title: Text(userName, style: AppTextStyles.interBold18()),
         subtitle: Text(
-          "Welcome to DocDoc",
+          "How Are you Today?",
           style: AppTextStyles.interRegular11().copyWith(
             color: AppColors.text80,
           ),

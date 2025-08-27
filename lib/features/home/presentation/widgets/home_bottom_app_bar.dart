@@ -2,6 +2,7 @@ import 'package:doctors_doc/config/images/images_path.dart';
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeBottomBar extends StatelessWidget {
   const HomeBottomBar({super.key});
@@ -39,11 +40,19 @@ class HomeBottomBar extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Icon(Icons.home_outlined, size: 24.sp),
-                    Icon(Icons.chat_bubble_outline_outlined, size: 24.sp),
+                    NavBarIcon(
+                      icon_path: Assets.assetsImagesIconsBottomNavBarHome,
+                    ),
+
+                    NavBarIcon(
+                      icon_path:
+                          Assets.assetsImagesIconsBottomNavBarMessageText,
+                    ),
                     SizedBox(width: 72.w),
-                    Icon(Icons.person_2_outlined, size: 24.sp),
-                    Icon(Icons.notifications_none, size: 24.sp),
+                    NavBarIcon(
+                      icon_path: Assets.assetsImagesIconsBottomNavBarCalendar2,
+                    ),
+                    Icon(Icons.person_2_rounded, size: 24.sp),
                   ],
                 ),
               ),
@@ -57,7 +66,7 @@ class HomeBottomBar extends StatelessWidget {
                   Container(
                     width: 72.w,
                     height: 72.w,
-                    padding: EdgeInsets.all(16.sp),
+                    padding: EdgeInsets.all(24.sp),
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       border: Border.all(
@@ -67,10 +76,10 @@ class HomeBottomBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(28.r),
                       color: AppColors.primary100,
                     ),
-                    child: Image.asset(
-                      width: 24.w,
-                      height: 24.h,
-                      Assets.assetsImagesIconsSearch,
+                    child: SvgPicture.asset(
+                      width: 24.sp,
+                      height: 24.sp,
+                      Assets.assetsImagesIconsBottomNavBarSearchNormal,
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -80,6 +89,26 @@ class HomeBottomBar extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class NavBarIcon extends StatelessWidget {
+  final String icon_path;
+  final Color? color;
+  const NavBarIcon({super.key, required this.icon_path, this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(
+      icon_path,
+      width: 24.sp,
+      height: 24.sp,
+      fit: BoxFit.fill,
+      colorFilter: ColorFilter.mode(
+        color ?? AppColors.text100,
+        BlendMode.srcIn,
       ),
     );
   }

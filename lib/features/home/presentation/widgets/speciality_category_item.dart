@@ -1,12 +1,12 @@
 import 'package:doctors_doc/config/themes/colors.dart';
 import 'package:doctors_doc/config/themes/texts_styles.dart';
-import 'package:doctors_doc/features/home/domain/entities/specialty_entity.dart';
+import 'package:doctors_doc/features/home/presentation/models/specialty_ui_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SpecialityWidget extends StatelessWidget {
-  final SpecialtyEntity specialtyEntity;
-  const SpecialityWidget({super.key, required this.specialtyEntity});
+  final SpecialtyUiModel specialtyUiModel;
+  const SpecialityWidget({super.key, required this.specialtyUiModel});
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,13 @@ class SpecialityWidget extends StatelessWidget {
             child: Image.asset(
               width: 28.w,
               height: 28.w,
-              specialtyEntity.image,
+              specialtyUiModel.image,
               fit: BoxFit.fill,
             ),
           ),
         ),
         SizedBox(height: 8.h),
-        Text("${specialtyEntity.name}", style: AppTextStyles.interMedium12()),
+        Text("${specialtyUiModel.name}", style: AppTextStyles.interMedium12()),
       ],
     );
   }
