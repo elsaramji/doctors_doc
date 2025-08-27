@@ -1,5 +1,4 @@
 import 'package:doctors_doc/features/home/presentation/models/specialty_ui_model.dart';
-import 'package:doctors_doc/features/home/presentation/views/home_view.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/see_more_header.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/speciality_category_item.dart';
 import 'package:flutter/material.dart';

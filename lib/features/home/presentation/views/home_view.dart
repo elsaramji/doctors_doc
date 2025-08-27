@@ -1,6 +1,5 @@
 import 'package:doctors_doc/config/routes/constant_routs.dart';
 import 'package:doctors_doc/config/themes/colors.dart';
-import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/home_banner_view.dart';
 import 'package:doctors_doc/features/home/presentation/widgets/home_bottom_app_bar.dart';
