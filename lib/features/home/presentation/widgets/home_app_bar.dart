@@ -3,7 +3,7 @@ import 'package:doctors_doc/config/themes/texts_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HomeAppBar extends StatelessWidget {
+class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String userName;
   const HomeAppBar({super.key, required this.userName});
 
@@ -38,4 +38,8 @@ class HomeAppBar extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size.fromHeight(72.h);
 }

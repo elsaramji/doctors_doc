@@ -17,13 +17,13 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundwhite,
+      appBar: HomeAppBar(userName: 'John Doe'),
       body: Container(
         width: 1.sw,
         height: 1.sh - 80.h,
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
           children: [
-            HomeAppBar(userName: "John Doe"),
             HomeBanner(),
             HomeSpecialityList(),
             SeeMoreHeader(title: "Recommendtion Doctors", isViewAll: true),
