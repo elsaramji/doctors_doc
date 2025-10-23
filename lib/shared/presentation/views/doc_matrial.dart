@@ -1,4 +1,5 @@
 import 'package:doctors_doc/config/routes/go_routs.dart';
+import 'package:doctors_doc/config/themes/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,6 +15,7 @@ class DocApp extends StatelessWidget {
       builder: (context, child) => MaterialApp.router(
         debugShowCheckedModeBanner: false,
         routerConfig: router,
+        theme: AppTheme.lightTheme,
         title: 'Doctors Doc',
       ),
     );

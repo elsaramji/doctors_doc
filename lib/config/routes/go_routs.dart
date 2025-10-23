@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: ConstantRouts.home,
+  initialLocation: ConstantRouts.onbording,
   routes: [
     GoRoute(
       path: ConstantRouts.onbording,
@@ -30,6 +30,7 @@ final GoRouter router = GoRouter(
 CustomTransitionPage _easyTransition(Widget child) {
   return CustomTransitionPage(
     child: child,
+    transitionDuration: const Duration(microseconds: 500),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       final opacityAnimation = Tween<double>(
         begin: 0,
